@@ -82,8 +82,12 @@ class CredentialsStore implements CredentialStoreInterface
     }
 
     private function createDefaultCredentials(): X509Credential
-    {
+    {        
         $vendorPath         = __DIR__.'/../../../../../../vendor';
+        // Allow vendor also to live one level higher
+        if(!is_dir($vendorPath)) {
+            $vendorPath         = __DIR__.'/../../../../../../../vendor';
+        }
         $certificateContent = file_get_contents($vendorPath.'/lightsaml/lightsaml/web/sp/saml.crt');
         $privateKeyContent  = file_get_contents($vendorPath.'/lightsaml/lightsaml/web/sp/saml.key');
         $keyPassword        = '';
