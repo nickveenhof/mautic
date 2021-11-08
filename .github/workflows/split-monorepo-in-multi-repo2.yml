@@ -1,4 +1,4 @@
-name: 'Packages Split 2'
+name: 'Packages Split'
 
 on:
     push:
@@ -13,12 +13,8 @@ on:
     create:
         tags:
             - '*'
-        branches:
-            - '*'
     delete:
         tags:
-            - '*'
-        branches:
             - '*'
 
 jobs:
