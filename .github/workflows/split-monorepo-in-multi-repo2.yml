@@ -1,3 +1,5 @@
+name: 'Packages Split 2'
+
 on:
     push:
         # Only trigger for specific branches or changes in specific paths.
