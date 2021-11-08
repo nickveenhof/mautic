@@ -5,6 +5,7 @@ on:
         branches:
             - 4.x
             - 4.0
+            - 4.x-gitsplit
         tags:
             - '*'
 
